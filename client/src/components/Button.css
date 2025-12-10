@@ -1,0 +1,41 @@
+.button {
+  width: 25%;
+  height: 60px;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.button:hover {
+  background-color: #e0e0e0;
+}
+.operator {
+  background-color: #ff9500;
+  color: white;
+}
+.operator:hover {
+  background-color: #e68a00;
+}
+.function {
+  background-color: #d3d3d3;
+}
+.function:hover {
+  background-color: #c0c0c0;
+}
+.equals {
+  background-color: #ff9500;
+  color: white;
+}
+.equals:hover {
+  background-color: #e68a00;
+}
+.back-btn {
+  text-decoration: none;
+  background: #444;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 1rem;
+  display: inline-block;
+}

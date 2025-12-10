@@ -1,0 +1,347 @@
+/* components/Dashboard.css */
+
+.dashboard {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  border: 2px solid #00ff88;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3);
+}
+
+.welcome-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00ff88;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+  min-height: 4rem;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  color: #00ff88;
+  font-weight: normal;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.user-greeting {
+  font-size: 1.5rem;
+  color: #bbb;
+  margin: 1rem 0;
+}
+
+.highlight {
+  color: #00ff88;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.welcome-subtitle {
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  border: 2px solid rgba(0, 255, 136, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: #00ff88;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+}
+
+/* Real Icon Wrapper for Stats */
+.stat-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 136, 0.1);
+  border: 2px solid rgba(0, 255, 136, 0.3);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover .stat-icon-wrapper {
+  background: rgba(0, 255, 136, 0.2);
+  border-color: #00ff88;
+  transform: rotate(10deg) scale(1.1);
+}
+
+.stat-icon-real {
+  font-size: 2rem;
+  color: #00ff88;
+}
+
+.stat-content h3 {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-number {
+  color: #00ff88;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Calculators Grid */
+.calculators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.calculator-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  border: 2px solid rgba(0, 255, 136, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.calculator-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--card-color, #00ff88);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.calculator-card:hover {
+  border-color: var(--card-color, #00ff88);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
+}
+
+.calculator-card:hover::before {
+  transform: scaleX(1);
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: var(--card-color, #00ff88);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.calculator-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(0, 255, 136, 0.2);
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: #00ff88;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+}
+
+.card-description {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.card-arrow {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--card-color, #00ff88);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.calculator-card:hover .card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Tips Section */
+.tips-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  border: 2px solid rgba(0, 255, 136, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.tips-section h2 {
+  color: #00ff88;
+  font-size: 1.8rem;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tip-card {
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  background: rgba(0, 255, 136, 0.15);
+  border-color: #00ff88;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 255, 136, 0.3);
+}
+
+/* Real Icon Wrapper for Tips */
+.tip-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 136, 0.2);
+  border: 2px solid rgba(0, 255, 136, 0.4);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover .tip-icon-wrapper {
+  background: rgba(0, 255, 136, 0.3);
+  border-color: #00ff88;
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.tip-icon-real {
+  font-size: 1.5rem;
+  color: #00ff88;
+}
+
+.tip-card p {
+  color: #bbb;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .welcome-text {
+    font-size: 2rem;
+    min-height: 3rem;
+  }
+
+  .user-greeting {
+    font-size: 1.2rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+
+  .calculators-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .stat-icon-real {
+    font-size: 1.8rem;
+  }
+
+  .tip-icon-wrapper {
+    width: 45px;
+    height: 45px;
+  }
+
+  .tip-icon-real {
+    font-size: 1.3rem;
+  }
+}
