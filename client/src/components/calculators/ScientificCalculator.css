@@ -1,0 +1,456 @@
+.sci-container {
+  border: 2px solid #00ff9d;
+  border-radius: 14px;
+  max-width: 450px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 25px 15px;
+  background: linear-gradient(135deg, #0e0e0e 0%, #1a1a1a 100%);
+  box-shadow: 0 0 20px rgba(0,255,157,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-btn {
+  align-self: flex-start;
+  color: #00ff9d;
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid #00ff9d;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  background: #00ff9d;
+  color: black;
+  font-weight: bold;
+  transform: translateX(-5px);
+}
+
+.sci-title {
+  font-size: 26px;
+  margin-bottom: 8px;
+  color: #00ff9d;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sci-subtitle {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Info Banner */
+.info-banner {
+  background: rgba(0, 255, 157, 0.1);
+  border: 1px solid #00ff9d;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.info-banner h3 {
+  font-size: 16px;
+  color: #00ff9d;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-banner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-banner li {
+  font-size: 13px;
+  color: #bbb;
+  margin: 6px 0;
+  padding-left: 18px;
+  position: relative;
+}
+
+.info-banner li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00ff9d;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Mode Toggle Section */
+.mode-section {
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(0, 255, 157, 0.05);
+  border: 1px dashed #00ff9d;
+  border-radius: 8px;
+}
+
+.mode-label {
+  font-size: 14px;
+  color: #00ff9d;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mode-hint {
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.toggle-wrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-wrapper span {
+  font-weight: bold;
+  font-size: 15px;
+  color: #00ff9d;
+}
+
+/* Switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #444;
+  border-radius: 20px;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  transition: 0.3s;
+  border: 1px solid #00ff9d;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px; width: 18px;
+  left: 3px; bottom: 2px;
+  background-color: #00ff9d;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 0 5px rgba(0, 255, 157, 0.5);
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+/* Display */
+.sci-display {
+  background: black;
+  border: 2px solid #00ff9d;
+  padding: 15px;
+  font-size: 26px;
+  width: 90%;
+  max-width: 400px;
+  text-align: right;
+  margin-bottom: 15px;
+  overflow-x: auto;
+  border-radius: 8px;
+  color: #00ff9d;
+  box-shadow: inset 0 0 10px rgba(0, 255, 157, 0.2);
+  font-family: 'Courier New', monospace;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* History Button */
+.history-btn {
+  background: rgba(0, 255, 157, 0.1);
+  border: 1px solid #00ff9d;
+  color: #00ff9d;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 14px;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.history-btn:hover {
+  background: #00ff9d;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 157, 0.3);
+}
+
+/* History Panel */
+.history-panel {
+  width: 90%;
+  max-width: 400px;
+  background: #1a1a1a;
+  border: 2px solid #00ff9d;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #00ff9d;
+  background: rgba(0, 255, 157, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.history-header h3 {
+  font-size: 16px;
+  color: #00ff9d;
+  margin: 0;
+}
+
+.clear-history-btn {
+  background: #d40000;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.clear-history-btn:hover {
+  background: #ff0000;
+  transform: scale(1.05);
+}
+
+.history-list {
+  padding: 10px;
+}
+
+.no-history {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  font-style: italic;
+}
+
+.history-item {
+  background: rgba(0, 255, 157, 0.05);
+  border: 1px solid #00ff9d;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.history-item:hover {
+  background: rgba(0, 255, 157, 0.15);
+  transform: translateX(5px);
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+}
+
+.history-expression {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-family: 'Courier New', monospace;
+}
+
+.history-result {
+  color: #00ff9d;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: 'Courier New', monospace;
+}
+
+.history-mode {
+  color: #888;
+  font-size: 11px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Button Sections */
+.button-section {
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+.section-label {
+  font-size: 13px;
+  color: #00ff9d;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 5px;
+  background: rgba(0, 255, 157, 0.1);
+  border-radius: 5px;
+}
+
+/* Button Grid */
+.sci-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  gap: 10px;
+  justify-content: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.sci-grid button {
+  background: #1b1b1b;
+  border: 1px solid #00ff9d;
+  color: #00ff9d;
+  font-size: 17px;
+  border-radius: 8px;
+  padding: 15px 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
+  position: relative;
+}
+
+.sci-grid button:hover {
+  background: #00ff9d;
+  color: black;
+  border: 1px solid black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 157, 0.4);
+}
+
+.sci-grid button:active {
+  transform: translateY(0);
+}
+
+/* Special button styles */
+.function-btn {
+  background: rgba(0, 102, 255, 0.2) !important;
+  border-color: #0066ff !important;
+}
+
+.function-btn:hover {
+  background: #0066ff !important;
+  color: white !important;
+}
+
+.operator-btn {
+  background: rgba(255, 165, 0, 0.2) !important;
+  border-color: #ffa500 !important;
+}
+
+.operator-btn:hover {
+  background: #ffa500 !important;
+  color: black !important;
+}
+
+.equals {
+  grid-column: span 2;
+  background: #0066ff !important;
+  color: white !important;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.equals:hover {
+  background: #0080ff !important;
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.5);
+}
+
+.clear {
+  background: #d40000 !important;
+  color: white !important;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.clear:hover {
+  background: #ff0000 !important;
+  box-shadow: 0 4px 15px rgba(212, 0, 0, 0.5);
+}
+
+/* Tooltip on hover */
+.sci-grid button[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: #00ff9d;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 11px;
+  white-space: nowrap;
+  z-index: 100;
+  border: 1px solid #00ff9d;
+}
+
+/* Scrollbar styling for history */
+.history-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.history-panel::-webkit-scrollbar-track {
+  background: #0e0e0e;
+  border-radius: 5px;
+}
+
+.history-panel::-webkit-scrollbar-thumb {
+  background: #00ff9d;
+  border-radius: 5px;
+}
+
+.history-panel::-webkit-scrollbar-thumb:hover {
+  background: #00cc7d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .sci-grid {
+    grid-template-columns: repeat(4, 65px);
+    gap: 8px;
+  }
+  
+  .sci-grid button {
+    padding: 12px 5px;
+    font-size: 15px;
+  }
+}

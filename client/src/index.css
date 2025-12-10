@@ -1,0 +1,119 @@
+/* Base layout */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Universal box layout */
+* {
+  box-sizing: border-box;
+}
+
+/* Form Input */
+.input-box {
+  width: 100%;
+  padding: 10px 14px;
+  background: #1c1c1c;
+  border: 1px solid #00ff88;
+  border-radius: 6px;
+  color: white;
+  outline: none;
+  transition: border 0.25s, box-shadow 0.25s;
+  box-shadow: inset 0 0 4px rgba(0, 255, 136, 0.4);
+}
+
+.input-box:focus {
+  border-color: #33ffa5;
+  box-shadow: 0 0 6px rgba(0, 255, 136, 0.6);
+}
+
+/* Button Base */
+.btn {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  transition: transform 0.25s, filter 0.25s, box-shadow 0.25s;
+  letter-spacing: 0.5px;
+}
+
+/* Button Color Variants */
+.btn.primary {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 0 8px rgba(0, 136, 255, 0.5);
+}
+
+.btn.success {
+  background: #28a745;
+  color: white;
+  box-shadow: 0 0 8px rgba(0, 255, 115, 0.6);
+}
+
+.btn.secondary {
+  background: #666;
+  color: white;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+/* Hover Animation */
+.btn:hover,
+.calc-btn:hover {
+  filter: brightness(1.15);
+  transform: scale(1.05);
+}
+
+/* Tool card / sections */
+.calc-card {
+  display: grid;
+  gap: 16px;
+  background: #111;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.25);
+}
+
+/* Inline options layout */
+.inline-options {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  align-items: center;
+}
+
+/* Input row layout */
+.coord-row {
+  display: flex;
+  gap: 8px;
+}
+
+/* Special calculator-style button */
+.calc-btn {
+  background: #28a7ff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 0 6px rgba(0, 170, 255, 0.6);
+  transition: 0.2s;
+}
+
+/* Result area */
+.result-box {
+  padding: 10px 12px;
+  background: #1c1c1c;
+  border-radius: 6px;
+  border: 1px solid #00ff88;
+  box-shadow: inset 0 0 6px rgba(0, 255, 136, 0.4);
+  color: #00ff88;
+  font-weight: 600;
+}
