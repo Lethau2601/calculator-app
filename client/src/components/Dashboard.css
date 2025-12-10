@@ -219,80 +219,81 @@
   transform: translateX(0);
 }
 
-/* Tips Section */
-.tips-section {
-  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
-  border: 2px solid rgba(0, 255, 136, 0.3);
-  border-radius: 20px;
-  padding: 2rem;
+/* Quick Tips Section - Horizontal Layout with Matching Background */
+.tips-section-horizontal {
+  background: transparent;
+  padding: 2rem 0;
   margin-top: 3rem;
 }
 
-.tips-section h2 {
+.tips-title {
   color: #00ff88;
   font-size: 1.8rem;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2rem 0;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 
-.tips-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.tip-card {
-  background: rgba(0, 255, 136, 0.1);
-  border: 1px solid rgba(0, 255, 136, 0.3);
-  border-radius: 12px;
-  padding: 1.5rem;
+.tips-horizontal-grid {
   display: flex;
-  align-items: flex-start;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.tip-card-horizontal {
+  flex: 1;
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  border: 2px solid rgba(0, 255, 136, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 1rem;
   transition: all 0.3s ease;
 }
 
-.tip-card:hover {
-  background: rgba(0, 255, 136, 0.15);
+.tip-card-horizontal:hover {
   border-color: #00ff88;
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(0, 255, 136, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
 }
 
-/* Real Icon Wrapper for Tips */
-.tip-icon-wrapper {
-  width: 50px;
-  height: 50px;
+/* Real Icon Wrapper for Tips - Horizontal */
+.tip-icon-wrapper-horizontal {
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 255, 136, 0.2);
-  border: 2px solid rgba(0, 255, 136, 0.4);
+  background: rgba(0, 255, 136, 0.1);
+  border: 2px solid rgba(0, 255, 136, 0.3);
   border-radius: 50%;
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
-.tip-card:hover .tip-icon-wrapper {
-  background: rgba(0, 255, 136, 0.3);
+.tip-card-horizontal:hover .tip-icon-wrapper-horizontal {
+  background: rgba(0, 255, 136, 0.2);
   border-color: #00ff88;
-  transform: rotate(-10deg) scale(1.1);
+  transform: rotate(360deg) scale(1.15);
 }
 
 .tip-icon-real {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #00ff88;
 }
 
-.tip-card p {
+.tip-card-horizontal p {
   color: #bbb;
   margin: 0;
   line-height: 1.6;
   font-size: 0.95rem;
-  flex: 1;
 }
 
 /* Responsive Design */
@@ -323,8 +324,10 @@
     gap: 1.5rem;
   }
 
-  .tips-grid {
-    grid-template-columns: 1fr;
+  /* Make tips stack vertically on mobile */
+  .tips-horizontal-grid {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .stat-icon-wrapper {
@@ -336,12 +339,12 @@
     font-size: 1.8rem;
   }
 
-  .tip-icon-wrapper {
-    width: 45px;
-    height: 45px;
+  .tip-icon-wrapper-horizontal {
+    width: 60px;
+    height: 60px;
   }
 
   .tip-icon-real {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }

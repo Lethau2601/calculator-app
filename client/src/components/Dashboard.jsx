@@ -187,29 +187,29 @@ const Dashboard = () => {
           ))}
         </div>
 
-        {/* Quick Tips Section with Real Icons */}
-        <div className="tips-section">
-          <h2>
-            <FaGraduationCap style={{ marginRight: '10px' }} />
+        {/* Quick Tips Section - Horizontal Layout */}
+        <div className="tips-section-horizontal">
+          <h2 className="tips-title">
+            <FaGraduationCap />
             Quick Tips
           </h2>
-          <div className="tips-grid">
-            <div className="tip-card">
-              <span className="tip-icon-wrapper">
+          <div className="tips-horizontal-grid">
+            <div className="tip-card-horizontal">
+              <div className="tip-icon-wrapper-horizontal">
                 <FaSave className="tip-icon-real" />
-              </span>
+              </div>
               <p>All your calculations are automatically saved</p>
             </div>
-            <div className="tip-card">
-              <span className="tip-icon-wrapper">
+            <div className="tip-card-horizontal">
+              <div className="tip-icon-wrapper-horizontal">
                 <FaBrain className="tip-icon-real" />
-              </span>
+              </div>
               <p>Try the AI Tutor for step-by-step explanations</p>
             </div>
-            <div className="tip-card">
-              <span className="tip-icon-wrapper">
+            <div className="tip-card-horizontal">
+              <div className="tip-icon-wrapper-horizontal">
                 <FaTachometerAlt className="tip-icon-real" />
-              </span>
+              </div>
               <p>Track your progress in the Tools section</p>
             </div>
           </div>
