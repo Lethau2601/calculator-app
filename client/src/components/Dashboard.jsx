@@ -1,6 +1,8 @@
 // components/Dashboard.jsx - With Real Icons
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AiAssistant from "./ai/AiAssistant";
+
 import { 
   FaCalculator, 
   FaBrain, 
@@ -137,6 +139,7 @@ const Dashboard = () => {
           </p>
         </div>
 
+
         {/* Stats Section with Real Icons */}
         <div className="stats-section">
           <div className="stat-card">
@@ -167,7 +170,9 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-
+     <div className="dashboard-section">
+  <AiAssistant userId={user?.id} />
+</div>
         {/* Tools Grid */}
         <div className="calculators-grid">
           {tools.map((tool) => (
